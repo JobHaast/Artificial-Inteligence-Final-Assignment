@@ -23,11 +23,6 @@ public class SudokuGrid
         }
     }
 
-    public void SetCell(int value, int xCord, int yCord)
-    {
-        Grid[xCord][yCord].Value = value;
-    }
-
     // Check if the number already exists in row
     public bool IsInRow(Cell cell)
     {
@@ -55,8 +50,8 @@ public class SudokuGrid
     public bool IsInBox(Cell cell)
     {
         int boxSize = (int)Math.Sqrt(Size);
-        int row = cell.XCord - cell.XCord % boxSize;
-        int col = cell.YCord - cell.YCord % boxSize;
+        int col = cell.XCord - cell.XCord % boxSize;
+        int row = cell.YCord - cell.YCord % boxSize;
 
         for (int i = row; i < row + boxSize; i++)
         {
@@ -74,13 +69,14 @@ public class SudokuGrid
         var x = new StringBuilder();
         foreach (List<Cell> row in Grid)
         {
-            x.AppendLine();
+            x.Append('\n');
             x.Append('|');
             foreach (Cell cell in row)
             {
                 x.Append(cell.ToString());
                 x.Append('|');
             }
+
         }
 
         return x.ToString();

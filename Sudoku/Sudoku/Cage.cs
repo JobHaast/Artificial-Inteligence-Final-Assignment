@@ -28,13 +28,8 @@ public class Cage
         return total == ExpectedTotal && Cells.Distinct().Count() == Cells.Count;
     }
 
-    public void AddCell(Cell cell)
+    public bool Contains(Cell cell)
     {
-        Cells.Add(cell);
-    }
-
-    public void RemoveCell(Cell cell)
-    {
-        Cells.Remove(cell);
+        return Cells.Contains(cell);
     }
 }

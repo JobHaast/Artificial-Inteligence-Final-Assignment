@@ -14,9 +14,8 @@ var cages = new List<Cage>
     })
 };
 
-var killerSudokuGrid = new KillerSudokuGrid(9, cages);
 var sudokuGrid = new SudokuGrid(9);
+Console.WriteLine(BasicSudokuSolver.SolveSudoku(sudokuGrid));
 
-BasicSudokuSolver.IsValid(sudokuGrid, 0, 0);
-
-Console.WriteLine(sudokuGrid);
+//var killerSudokuGrid = new KillerSudokuGrid(9, cages);
+//Console.WriteLine(KillerSudokuSolver.SolveSudoku(killerSudokuGrid));
