@@ -42,7 +42,7 @@ public class KillerSudokuGrid : SudokuGrid
             {
                 foreach (Cell c in cage.Cells)
                 {
-                    if (c != cell) c.Domain.Add(cell.Value);
+                    if (c != cell && !c.Domain.Contains(cell.Value)) c.Domain.Add(cell.Value);
                 }
             }
         }

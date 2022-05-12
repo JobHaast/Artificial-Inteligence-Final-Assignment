@@ -117,7 +117,7 @@ public class SudokuGrid
     {
         foreach (Cell c in Grid[cell.YCord])
         {
-            if (c.XCord != cell.XCord)
+            if (c.XCord != cell.XCord && !c.Domain.Contains(cell.Value))
             {
                 c.Domain.Add(cell.Value);
             }
@@ -125,7 +125,7 @@ public class SudokuGrid
 
         foreach (List<Cell> r in Grid)
         {
-            if (r[cell.XCord].YCord != cell.YCord)
+            if (r[cell.XCord].YCord != cell.YCord && !r[cell.XCord].Domain.Contains(cell.Value))
             {
                 r[cell.XCord].Domain.Add(cell.Value);
             }
@@ -139,7 +139,7 @@ public class SudokuGrid
         {
             for (int j = col; j < col + boxSize; j++)
             {
-                if (Grid[i][j] != cell) Grid[i][j].Domain.Add(cell.Value);
+                if (Grid[i][j] != cell && !Grid[i][j].Domain.Contains(cell.Value)) Grid[i][j].Domain.Add(cell.Value);
             }
         }
     }
