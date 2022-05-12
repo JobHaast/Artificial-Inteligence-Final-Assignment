@@ -81,4 +81,66 @@ public class SudokuGrid
 
         return x.ToString();
     }
+
+    public virtual void RemoveFromDomains(Cell cell)
+    {
+        foreach (Cell c in Grid[cell.YCord])
+        {
+            if (c.XCord != cell.XCord)
+            {
+                c.Domain.Remove(cell.Value);
+            }
+        }
+
+        foreach (List<Cell> r in Grid)
+        {
+            if (r[cell.XCord].YCord != cell.YCord)
+            {
+                r[cell.XCord].Domain.Remove(cell.Value);
+            }
+        }
+
+        int boxSize = (int)Math.Sqrt(Size);
+        int col = cell.XCord - cell.XCord % boxSize;
+        int row = cell.YCord - cell.YCord % boxSize;
+
+        for (int i = row; i < row + boxSize; i++)
+        {
+            for (int j = col; j < col + boxSize; j++)
+            {
+                if (Grid[i][j] != cell) Grid[i][j].Domain.Remove(cell.Value);
+            }
+        }
+    }
+
+    public virtual void AddToDomains(Cell cell)
+    {
+        foreach (Cell c in Grid[cell.YCord])
+        {
+            if (c.XCord != cell.XCord)
+            {
+                c.Domain.Add(cell.Value);
+            }
+        }
+
+        foreach (List<Cell> r in Grid)
+        {
+            if (r[cell.XCord].YCord != cell.YCord)
+            {
+                r[cell.XCord].Domain.Add(cell.Value);
+            }
+        }
+
+        int boxSize = (int)Math.Sqrt(Size);
+        int col = cell.XCord - cell.XCord % boxSize;
+        int row = cell.YCord - cell.YCord % boxSize;
+
+        for (int i = row; i < row + boxSize; i++)
+        {
+            for (int j = col; j < col + boxSize; j++)
+            {
+                if (Grid[i][j] != cell) Grid[i][j].Domain.Add(cell.Value);
+            }
+        }
+    }
 }

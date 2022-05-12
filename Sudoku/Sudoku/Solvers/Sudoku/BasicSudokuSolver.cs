@@ -1,10 +1,10 @@
 ﻿using Sudoku.Grids;
 
-namespace Sudoku.Solvers;
+namespace Sudoku.Solvers.Sudoku;
 
-public class KillerSudokuSolver
+public class BasicSudokuSolver
 {
-    public static string SolveSudoku(KillerSudokuGrid board)
+    public static string SolveSudoku(SudokuGrid board)
     {
         if (IsValid(board, 0, 0))
         {
@@ -13,7 +13,7 @@ public class KillerSudokuSolver
         return "Unable to solve";
     }
 
-    public static bool IsValid(KillerSudokuGrid board, int yCord, int xCord)
+    public static bool IsValid(SudokuGrid board, int yCord, int xCord)
     {
         // Move to next row when at the end of a row
         if (xCord == board.Size)
@@ -46,27 +46,6 @@ public class KillerSudokuSolver
             if (IsValid(board, yCord, xCord + 1)) return true;
 
             board.Grid[yCord][xCord].Value = 0;
-        }
-
-        return false;
-    }
-
-    public static bool IsValidCage(KillerSudokuGrid board, Cell cell)
-    {
-        foreach(Cage cage in board.Cages)
-        {
-            List<int> total = new List<int>();
-            if (!cage.Contains(cell)) continue;
-            foreach (Cell c in cage.Cells)
-            {
-                if (c.XCord == cell.XCord && c.YCord == cell.YCord) total.Add(cell.Value);
-                else total.Add(board.Grid[c.YCord][c.XCord].Value);
-            }
-
-            //if (total.Sum() > cage.ExpectedTotal) return false;
-            if (total.Contains(0)) return true;
-            if (total.Sum() != cage.ExpectedTotal) return false;
-            return total.Count == new HashSet<int>(total).Count;
         }
 
         return false;

@@ -11,7 +11,39 @@ public class KillerSudokuGrid : SudokuGrid
         {
             foreach (Cell cell in cage.Cells)
             {
-                Grid[cell.XCord][cell.YCord] = cell;
+                Grid[cell.YCord][cell.XCord] = cell;
+            }
+        }
+    }
+
+    public override void RemoveFromDomains(Cell cell)
+    {
+        base.RemoveFromDomains(cell);
+
+        foreach (Cage cage in Cages)
+        {
+            if (cage.Contains(cell))
+            {
+                foreach (Cell c in cage.Cells)
+                {
+                    if(c != cell) c.Domain.Remove(cell.Value);
+                }
+            }
+        }
+    }
+
+    public override void AddToDomains(Cell cell)
+    {
+        base.AddToDomains(cell);
+
+        foreach (Cage cage in Cages)
+        {
+            if (cage.Contains(cell))
+            {
+                foreach (Cell c in cage.Cells)
+                {
+                    if (c != cell) c.Domain.Add(cell.Value);
+                }
             }
         }
     }
