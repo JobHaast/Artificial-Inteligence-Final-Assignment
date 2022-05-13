@@ -3,6 +3,9 @@ using Sudoku.Grids;
 using Sudoku.Solvers.KillerSudoku;
 using System.Diagnostics;
 
+//var sudokuGrid = new SudokuGrid(9);
+//Console.WriteLine(BasicSudokuSolver.SolveSudoku(sudokuGrid));
+
 var killerSudokuGrid = new KillerSudokuGrid(9, KillerSudokuGenerator.GenerateKillerSudokuCages2());
 
 Stopwatch stopwatch = new();
