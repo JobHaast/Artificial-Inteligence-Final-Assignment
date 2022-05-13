@@ -325,6 +325,10 @@ public class KillerSudokuGenerator
                 new Cell(0, 7),
                 new Cell(0, 8)
             }),
+            new Cage(4, new List<Cell>
+            {
+                new Cell(0, 8)
+            }),
             new Cage(9, new List<Cell>
             {
                 new Cell(2, 6),
