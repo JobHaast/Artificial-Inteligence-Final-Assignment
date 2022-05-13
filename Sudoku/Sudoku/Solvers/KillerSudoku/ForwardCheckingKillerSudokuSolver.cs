@@ -2,7 +2,7 @@
 
 namespace Sudoku.Solvers.KillerSudoku;
 
-public class ForwardCheckingKillerSudokuSolver : BaseKillerSudokuSolver
+public class BacktrackingAndForwardCheckingKillerSudokuSolver : BaseKillerSudokuSolver
 {
     public static string SolveSudoku(KillerSudokuGrid board)
     {
