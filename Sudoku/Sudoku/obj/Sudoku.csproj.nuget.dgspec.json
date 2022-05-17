@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Niek Snijders\\Desktop\\Avans spul\\Periode 3.4\\AI\\Artificial-Inteligence-Final-Assignment\\Sudoku\\Sudoku\\Sudoku.csproj": {}
+    "C:\\Users\\jobha\\Desktop\\School Documenten\\Leerjaar3_Per4\\Artificial Intelligence\\Final Assignment\\Sudoku\\Sudoku\\Sudoku.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Niek Snijders\\Desktop\\Avans spul\\Periode 3.4\\AI\\Artificial-Inteligence-Final-Assignment\\Sudoku\\Sudoku\\Sudoku.csproj": {
+    "C:\\Users\\jobha\\Desktop\\School Documenten\\Leerjaar3_Per4\\Artificial Intelligence\\Final Assignment\\Sudoku\\Sudoku\\Sudoku.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Niek Snijders\\Desktop\\Avans spul\\Periode 3.4\\AI\\Artificial-Inteligence-Final-Assignment\\Sudoku\\Sudoku\\Sudoku.csproj",
+        "projectUniqueName": "C:\\Users\\jobha\\Desktop\\School Documenten\\Leerjaar3_Per4\\Artificial Intelligence\\Final Assignment\\Sudoku\\Sudoku\\Sudoku.csproj",
         "projectName": "Sudoku",
-        "projectPath": "C:\\Users\\Niek Snijders\\Desktop\\Avans spul\\Periode 3.4\\AI\\Artificial-Inteligence-Final-Assignment\\Sudoku\\Sudoku\\Sudoku.csproj",
-        "packagesPath": "C:\\Users\\Niek Snijders\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Niek Snijders\\Desktop\\Avans spul\\Periode 3.4\\AI\\Artificial-Inteligence-Final-Assignment\\Sudoku\\Sudoku\\obj\\",
+        "projectPath": "C:\\Users\\jobha\\Desktop\\School Documenten\\Leerjaar3_Per4\\Artificial Intelligence\\Final Assignment\\Sudoku\\Sudoku\\Sudoku.csproj",
+        "packagesPath": "C:\\Users\\jobha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jobha\\Desktop\\School Documenten\\Leerjaar3_Per4\\Artificial Intelligence\\Final Assignment\\Sudoku\\Sudoku\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Niek Snijders\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jobha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
